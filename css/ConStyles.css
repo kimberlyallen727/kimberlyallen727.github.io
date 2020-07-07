@@ -12,7 +12,7 @@ body{
 	background: -o-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
 	background: -webkit-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
 	background: repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
-	height: 100vh;
+	background-repeat: repeat-y;
 	}
 
 .hdg {
