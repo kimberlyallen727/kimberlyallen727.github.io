@@ -1,0 +1,374 @@
+/* Style Sheet for Optimum Web Design Webpages                     */
+/* Author: Kimberly Allen  Last Update Date: January 20, 2020      */
+
+
+body{
+	color: floralwhite; 
+	font-family: pixochrome, Calibri, "Gill Sans", Helvetica, Verdana;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 5px 35px 5px 35px; 
+	/* Specifies a linear gradient from top to bottom White-Dark Turquoise-Blue-Purple */
+	background-image: -moz-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background-image: -o-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background-image: -webkit-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background-image: linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	}
+
+
+nav a {
+	color: black;
+	font-size: 1.25em;
+		}
+
+header {
+	color: DarkSlateGray; 
+	text-align: center;
+	display: inline-block;
+	font-size: 3em;
+	margin: 3%;
+		}
+
+h2 {font-size: 3.25em;
+	color: DarkBlue;
+	display: inline;
+	}
+
+h3 { color: DarkSlateGray; 
+	 font-size: 2em;
+	 margin: 12px;}
+
+p { color: Silver; 
+	font-family: Calibri, "Gill Sans", Helvetica, Verdana;
+    font-size: 1.25em;}
+
+.DarkBlue {	color: DarkBlue; }
+
+.DarkViolet { color: DarkViolet; }
+
+.white { color: FloralWhite; }
+
+@font-face {
+   font-family: 
+   "pixochrome";
+   src: url("PIXOCHROME.tff") format('truetype');
+   src: url("PIXOCHROME.woff") format("woff");
+}
+
+.copyright { font-size: .90em; }
+
+.nav {font-size: 1.25em;}
+
+/* Style img to create a fluid image */
+img {
+	max-width: 100%;
+}
+
+
+
+/*********************************/
+/* STYLES FOR THE MOBILE CLASS   *
+/*********************************/
+@media only screen and (max-width: 460px) {
+
+
+.mobile {
+	display: inline;
+}
+
+.desktop {
+	display: none;
+}
+
+.world {
+	display: none;
+}
+
+.tablet {
+	display: none;
+}
+
+
+.GridWrapper{
+	display: inline-grid;
+/* grid-template-columns: 1fr; */
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 1em;
+	justify-items: center;
+	align-items: center;
+	grid-template-areas: 
+	"logo"
+	"logo"
+	"nav"
+	"nav"
+	"welcome"
+	"welcome"
+	"MainMessage"
+	"AreaService"
+	"thanks" 
+	"thanks"
+	"copyright"
+}
+
+.logo {
+	grid-column: 1/1;
+	grid-row: 1/3;
+	width: 80%;
+	border-radius: 0;
+	
+
+	/*
+	height: 125px; width: 200px;
+	*/
+}
+
+.nav {
+	grid-column: 1/1;
+	grid-row: 3/5;
+	font-weight: bold;
+			}
+
+
+.welcome {
+	grid-column: 1/1;
+	grid-row: 5/7;
+	
+}
+
+.MainMessage {
+	grid-column: 1/1;
+	grid-row: 7/8;
+}
+
+.AreaService {
+	grid-column: 1/1;
+	grid-row: 8/9;
+}
+
+.thanks {
+	font-size: 1.2em;
+	grid-column: 1/1;
+	grid-row: 9/10;
+	font-size: 1.2em;
+	color: DarkBlue;
+	margin: 0;
+	font-family: "Monotype Corsiva";
+}
+ 
+.copyright {
+	grid-column: 1/1;
+	grid-row: 10/11;
+	grid-area: copyright;
+	align-self: start;
+		}
+
+} /* End Syles for MOBILE class              */
+
+
+
+/*******************************************/
+/* Media Query for TABLET viewport         */
+/*******************************************/
+@media only screen and (min-width: 461px) and (max-width: 899px )
+{
+
+.mobile {
+	display: none;
+		}
+
+.tablet{
+	display: inline-grid;
+		}
+
+.desktop {
+	display: none;
+		}
+
+.world {
+	display: none;
+	}
+
+.GridWrapper{
+	display: inline-grid;
+    grid-template-columns: 1fr 1fr 2fr;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 1em;
+	justify-items: center;
+	align-items: center;
+	grid-template-areas: 
+	"logo welcome"
+	"logo welcome"
+	"nav MainMessage"
+	"nav MainMessage"
+	"AreaService AreaService"
+	"copyright thanks"
+	}
+
+.logo {
+	grid-column: 1/3;
+	grid-row: 1/3;
+	width: 80%;
+	grid-area: logo;
+	}
+
+.welcome {
+	grid-column: 3/5;
+	grid-row: 1/3;
+	grid-area: welcome;
+	
+}
+
+.nav {
+	grid-column: 1/2;
+	grid-row: 3/5;
+	grid-area: nav;
+	font-weight: bold;
+			}
+
+
+.MainMessage {
+	grid-column: 2/4;
+	grid-row: 3/5;
+	grid-area: MainMessage;
+	color: FloralWhite;
+}
+
+.AreaService {
+	grid-column: 1/4;
+	grid-row: 5/6;
+	grid-area: AreaService;
+}
+
+.copyright {
+	grid-column: 1/2;
+	grid-row: 6/7;
+	grid-area: copyright;
+	align-self: start;
+	}
+
+.thanks {
+	font-size: 1.2em;
+	grid-column: 2/4;
+	grid-row: 6/7;
+	grid-area: thanks;
+	font-size: 1.2em;
+	color: DarkBlue;
+	margin: 0;
+	font-family: "Monotype Corsiva";
+	align-self: end;
+}
+ 
+
+
+} /* end TABLET view            */
+
+/*******************************************/
+/* Media Query for DESKTOP viewport        */
+/*******************************************/
+
+@media only screen and (min-width: 900px) {
+
+.mobile {
+	display: none;
+		}
+
+.tablet{
+	display: none;
+		}
+
+.desktop {
+	display: inline-grid;
+		}
+
+.GridWrapper{
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 1em;
+	justify-items: stretch;
+	align-items: stretch;
+	grid-template-areas: 
+	"logo welcome welcome"
+	"logo welcome welcome"
+	"nav MainMessage world"
+	"AreaService AreaService world"
+	"copyright thanks thanks" 
+}
+
+.logo {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	width: 90%;
+	grid-area: logo;
+	align-self: center;
+	}
+
+
+.welcome {
+	grid-column: 2/4;
+	grid-row: 1/2;
+	grid-area: welcome;
+	align-self: center;
+	
+}
+
+.nav {
+	grid-column: 1/2;
+	grid-row: 2/4;
+	grid-area: nav;
+	font-weight: bold;
+			}
+
+.MainMessage {
+	grid-column: 2/3;
+	grid-row: 2/4;
+	grid-area: MainMessage;
+}
+
+.world {
+	grid-column: 3/4;
+	grid-row: 4/6;
+	margin: 0px;
+	padding-top: 0;
+	grid-area: world;
+	align-self: start;	
+	
+}
+
+
+.AreaService {
+	grid-column: 1/3;
+	grid-row: 3/4;
+	grid-area: AreaService;
+	align-self: center;
+			}
+
+.copyright {
+	grid-column: 1/2;
+	grid-row: 4/5;
+	grid-area: copyright;
+	align-self: end; 
+	justify-self: start;
+	
+		}
+
+.thanks {
+	font-size: 1.2em;
+	grid-column: 2/4;
+	grid-row: 4/5;
+	grid-area: thanks;
+	font-size: 1.2em;
+	color: DarkBlue;
+	margin: 0;
+	font-family: "Monotype Corsiva";
+}
+
+
+
+
+} /*  End DESKTOP view                       */
+
+
+
+
+

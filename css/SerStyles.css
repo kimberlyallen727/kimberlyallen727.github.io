@@ -1,0 +1,303 @@
+/* Style Sheet for Optimum Web Design Services Webpage           */
+/* Author: Kimberly Allen  Implementation Date: July 7, 2020     */
+
+
+body{
+	color: floralwhite; 
+	font-family: Helvetica, Verdana;
+	font-size: 1.2em;
+	margin: 5px 35px 5px 35px; 
+	/* Specifies a linear gradient from top to bottom White-Dark Turquoise-Blue-Purple */
+	background: -moz-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background: -o-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background: -webkit-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background: repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	}
+
+.hdg {
+	color: DarkSlateGray; 
+	display: inline-block;
+	font-size: 3em;
+	margin: 3%;
+		}
+
+h2 {font-size: 3.25em;
+	color: DarkBlue;
+	display: inline;
+	}
+
+h3 { color: DarkSlateGray; 
+	 font-size: 2em;
+	 margin: 12px;}
+
+.nav, .hdg {
+	font-family: pixochrome, Calibri;
+}
+
+.DarkBlue {	color: DarkBlue; }
+
+
+.white { color: FloralWhite; }
+
+
+@font-face {
+   font-family: 
+   "pixochrome";
+   src: url("PIXOCHROME.tff") format('truetype');
+   src: url("PIXOCHROME.woff") format("woff");
+}
+
+.copyright { font-size: .90em; }
+
+
+.nav a {color: Black;
+		font-size: 1.5em}
+
+
+.pink {
+	color: deeppink;
+	}
+
+/* Style img to create a fluid image */
+img {
+	max-width: 100%;
+}
+
+li { font-size: 2em; }
+
+/*********************************/
+/* STYLES FOR THE MOBILE CLASS   *
+/*********************************/
+@media only screen and (max-width: 480px) {
+
+
+
+.desktop {
+	display: none;
+}
+
+
+.tablet {
+	display: none;
+}
+
+.mobile {
+	display: inline;
+}
+
+body {margin: 5px 8px 5px 8px;
+	  text-align: center; }
+
+.GridWrapper{
+	grid-auto-rows: minmax(75px, auto);
+	grid-gap: 1em;
+	justify-items: stretch;
+	align-items: stretch;
+	margin: 5%;
+	}
+
+
+.nav a { text-decoration: none;
+		 background-color: FloralWhite; 
+		 padding: 7px;
+		 border-radius: 7px;}
+
+.body { text-align: center;}
+
+
+.copyright { padding-top: 40px; 
+	               color: FloralWhite;}
+
+.hdg { padding-bottom: 20px;}
+
+li { font-size: 1.5em;
+     padding-top: 10px; }			 
+
+} /* End Syles for MOBILE class              */
+
+
+
+/*******************************************/
+/* Media Query for TABLET viewport         */
+/*******************************************/
+@media only screen and (min-width: 481px) and (max-width: 950px )
+{
+
+.mobile {
+	display: none;
+		}
+
+.desktop {
+	display: none;
+		}
+
+.tablet{
+	display: inline-grid;
+		}
+
+
+.GridWrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(100px, auto);
+	grid-gap: 1em;
+	justify-items: stretch;
+	align-items: stretch;
+	grid-template-areas: 
+	"logo hdg"
+	"nav services"
+	"offer offer"
+	"offer offer"
+	"offer offer"
+	"copyright copyright";
+	}
+
+.logo {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	width: 70%;
+	grid-area: logo;
+	align-self: center;
+	justify-self: center;
+		}
+
+.hdg {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	grid-area: hdg;
+	justify-self: center;
+	align-self: center;
+	}
+
+.nav {
+	grid-column: 1/2;
+	grid-row: 2/3;
+	grid-area: nav;
+	font-weight: bold;
+	justify-self: center;
+	align-self: center;
+			}
+
+.services {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	grid-area: services;
+	justify-self: center;
+	align-self: center;
+	color: DarkSlateGray;
+	}
+
+.offer { 
+	grid-column: 1/3;
+	grid-row: 3/6;
+	grid-area: offer;
+	width: 50%;
+ }
+
+.copyright {
+	grid-column: 1/3;
+	grid-row: 6/7;
+	grid-area: copyright;
+	align-self: end; 
+	justify-self: start;
+	
+		}
+
+
+
+
+
+} /* end TABLET view            */
+
+/*******************************************/
+/* Media Query for DESKTOP viewport        */
+/*******************************************/
+
+@media only screen and (min-width: 951px) {
+
+.mobile {
+	display: none;
+		}
+
+.tablet{
+	display: none;
+		}
+
+.desktop {
+	display: inline-grid;
+		}
+
+.GridWrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(100px, auto);
+	grid-gap: 1em;
+	justify-items: stretch;
+	align-items: stretch;
+	grid-template-areas: 
+	"logo hdg"
+	"nav services"
+	"offer offer"
+	"offer offer"
+	"offer offer"
+	"copyright copyright";
+	}
+
+.logo {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	width: 70%;
+	grid-area: logo;
+	align-self: center;
+	justify-self: center;
+		}
+
+.hdg {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	grid-area: hdg;
+	justify-self: center;
+	align-self: center;
+	}
+
+.nav {
+	grid-column: 1/2;
+	grid-row: 2/3;
+	grid-area: nav;
+	font-weight: bold;
+	justify-self: center;
+	align-self: center;
+			}
+
+.services {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	grid-area: services;
+	justify-self: center;
+	align-self: center;
+	color: DarkSlateGray;
+	}
+
+.offer { 
+	grid-column: 1/3;
+	grid-row: 3/6;
+	grid-area: offer;
+	width: 50%;
+ }
+
+.copyright {
+	grid-column: 1/3;
+	grid-row: 6/7;
+	grid-area: copyright;
+	align-self: end; 
+	justify-self: start;	
+		}
+
+
+
+} /*  End DESKTOP view                       */
+
+
+
+
+

@@ -1,0 +1,346 @@
+/* Style Sheet for Optimum Web Design Contact Webpage             */
+/* Author: Kimberly Allen  Implementation Date: July 7, 2020      */
+
+
+body{
+	color: floralwhite; 
+	font-family: pixochrome, Calibri, "Gill Sans", Helvetica, Verdana;
+	font-size: 1.2em;
+	margin: 5px 35px 5px 35px; 
+	/* Specifies a linear gradient from top to bottom White-Dark Turquoise-Blue-Purple */
+	background: -moz-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background: -o-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background: -webkit-repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	background: repeating-linear-gradient(#FFFFFF, #00CED1, #2600FF, #8616C2);
+	height: 100vh;
+	}
+
+.hdg {
+	color: DarkSlateGray; 
+	display: inline-block;
+	font-size: 3em;
+	margin: 3%;
+	font-family: pixochrome, Calibri;
+		}
+
+h2 {font-size: 3.25em;
+	color: DarkBlue;
+	display: inline;
+	}
+
+h3 { color: DarkSlateGray; 
+	 font-size: 2em;
+	 margin: 12px;}
+
+h4 {
+	color: DarkBlue;
+}	 
+
+p { color: FloralWhite; 
+	font-family: Calibri, "Gill Sans", Helvetica, Verdana;
+    font-size: 1.25em;}
+
+.DarkBlue {	color: DarkBlue; }
+
+.DarkViolet { color: DarkViolet; }
+
+.white { color: FloralWhite; }
+
+
+@font-face {
+   font-family: 
+   "pixochrome";
+   src: url("PIXOCHROME.tff") format('truetype');
+   src: url("PIXOCHROME.woff") format("woff");
+}
+
+.copyright { font-size: .90em; 
+	         font-family: Helvetica, Verdana;
+}
+
+.nav a {font-size: 1.5em;
+	        color: Black;
+	        font-family: pixochrome, Calibri
+	    }
+
+.contactinfo {font-family: Helvetica, Verdana}
+
+.pink {
+	color: deeppink;
+	}
+
+.center {
+	text-align: center;
+}	
+
+ .button {
+      background-color: DarkBlue;
+      color: FloralWhite;
+      border-style: ridge;
+     }
+
+.red {
+	color: red;
+}
+
+a { color: FloralWhite; }
+
+/* Style img to create a fluid image */
+img {
+	max-width: 100%;
+}
+
+
+/*********************************/
+/* STYLES FOR THE MOBILE CLASS   *
+/*********************************/
+@media only screen and (max-width: 510px) {
+
+
+
+.desktop {
+	display: none;
+}
+
+
+.tablet {
+	display: none;
+}
+
+.mobile {
+	display: inline;
+}
+
+body {margin: 5px 8px 5px 8px;
+	  text-align: center; }
+
+a { color: DarkBlue; }
+
+.GridWrapper{
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 1em;
+	justify-items: center;
+	align-items: center;
+	}
+
+.nav a { text-decoration: none;
+		 background-color: FloralWhite; 
+		 padding: 7px;
+		 border-radius: 7px;}
+
+.body { text-align: center;}
+
+
+.copyright { padding-top: 40px; 
+	               color: Silver;}
+
+.nav { padding-top: 20px;}
+			 
+
+
+} /* End Syles for MOBILE class              */
+
+
+
+/*******************************************/
+/* Media Query for TABLET viewport         */
+/*******************************************/
+@media only screen and (min-width: 511px) and (max-width: 950px )
+{
+
+.mobile {
+	display: none;
+		}
+
+.desktop {
+	display: none;
+		}
+
+.tablet{
+	display: inline-grid;
+		}
+
+
+.GridWrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 1em;
+	justify-items: stretch;
+	align-items: stretch;
+	grid-template-areas: 
+	"logo logo hdg"
+	". contactinfo contactinfo"
+	"nav contactinfo contactinfo"
+	". contactinfo contactinfo"
+	"copyright social social";
+	}
+/*
+.formBox {
+        box-sizing: content-box;
+        border: 5px solid DarkSlateGray;
+        margin: auto;
+        width: 85%;
+        text-align: left;
+        padding-left: 10px;
+     }	
+*/
+
+.logo {
+	grid-column: 1/3;
+	grid-row: 1/2;
+	width: 70%;
+	grid-area: logo;
+	align-self: center;
+	justify-self: center;
+		}
+
+.hdg {
+	grid-column: 3/4;
+	grid-row: 1/2;
+	grid-area: hdg;
+	justify-self: center;
+	align-self: center;
+	}
+
+.nav {
+	grid-column: 1/2;
+	grid-row: 3/4;
+	grid-area: nav;
+	font-weight: bold;
+	justify-self: center;
+	align-self: start;
+			}
+
+.contactinfo {
+	grid-column: 2/4;
+	grid-row: 2/5;
+	grid-area: contactinfo;
+	justify-self: center;
+	align-self: center;
+	color: DarkSlateGray;
+	}
+	
+
+.copyright {
+	grid-column: 1/2;
+	grid-row: 5/6;
+	grid-area: copyright;
+	align-self: end; 
+	justify-self: start;
+	
+		}
+
+.social {
+	grid-column: 2/4;
+	grid-row: 5/6;
+	grid-area: social;
+	align-self: end; 
+	justify-self: center;
+}	
+
+
+
+} /* end TABLET view            */
+
+/*******************************************/
+/* Media Query for DESKTOP viewport        */
+/*******************************************/
+
+@media only screen and (min-width: 951px) {
+
+.mobile {
+	display: none;
+		}
+
+.tablet{
+	display: none;
+		}
+
+.desktop {
+	display: inline-grid;
+		}
+
+.GridWrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(100px, auto);
+/*	justify-items: stretch; */
+/*	align-items: stretch;   */
+	grid-template-areas: 
+	"logo hdg"
+	". contactinfo"
+	"nav contactinfo"
+	". contactinfo"
+	"copyright social";
+	}
+
+.formBox {
+        box-sizing: content-box;
+        border: 5px solid DarkSlateGray;
+        margin: 0;
+        width: 90%;
+        text-align: left;
+        padding-left: 50px;
+     }	
+
+.logo {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	width: 70%;
+	grid-area: logo;
+	align-self: center;
+	justify-self: center;
+		}
+
+.hdg {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	grid-area: hdg;
+	justify-self: center;
+	align-self: center;
+	}
+
+.nav {
+	grid-column: 1/2;
+	grid-row: 3/4;
+	grid-area: nav;
+	font-weight: bold;
+	justify-self: center; 
+	align-self: start;   
+			}
+
+.contactinfo {
+	grid-column: 2/3;
+	grid-row: 2/5;
+	grid-area: contactinfo;
+	justify-self: center;
+	align-self: start;
+	color: SkyBlue;
+	}
+
+
+.copyright {
+	grid-column: 1/2;
+	grid-row: 4/5;
+	grid-area: copyright;
+	align-self: end; 
+	justify-self: start;
+	
+		}
+
+.social {
+	grid-column: 2/3;
+	grid-row: 4/5;
+	grid-area: social;
+	align-self: end; 
+	justify-self: center;
+}	
+
+} 
+/*  End DESKTOP view                       */
+
+
+
+
+
